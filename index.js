@@ -15,6 +15,12 @@ app.listen(PORT, () => console.log("Escuchando peticiones en https://localhost:"
 
 // FUNCIONES GET:
 // Obtener datos de michito:
+app.get("/hola", async(request, response) =>
+{
+    response.send("Hola");
+});
+
+// Obtener datos de michito:
 app.get("/michi", async(request, response) =>
 {
     // Permite peticiones de cualquier origen:
