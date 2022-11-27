@@ -9,8 +9,8 @@ let { getAjolotito } = require("./ajolotito.js");
 var app = express();
 app.use(bodyparser.json());
 
-// Abriendo a la escucha de peticiones el puerto 80 de la app...
-const PORT = 3000
+// Abriendo a la escucha de peticiones el puerto 3000 de la app...
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Escuchando peticiones en https://localhost:"+PORT+"/"));
 
 // FUNCIONES GET:
