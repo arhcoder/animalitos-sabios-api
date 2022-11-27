@@ -15,9 +15,9 @@ app.listen(PORT, () => console.log("Escuchando peticiones en https://localhost:"
 
 // FUNCIONES GET:
 // Obtener datos de michito:
-app.get("/hola", async(request, response) =>
+app.get("/", async(request, response) =>
 {
-    response.send("Hola");
+    response.sendFile("index.html", {root: __dirname });
 });
 
 // Obtener datos de michito:
